@@ -10,13 +10,13 @@
                         expand: false,
                         cwd: './',
                         src: 'context-bootstrap.php',
-                        dest: '../<%= pkg.namespace %>-bootstrap.php'
+                        dest: '../<%= pkg.plugin_name.toLocaleLowerCase().replace(/ /g, '-' ) %>-bootstrap.php'
                     },
                     {
                         expand: false,
                         cwd: './',
                         src: 'context.php',
-                        dest: '../<%= pkg.namespace %>.php'
+                        dest: '../<%= pkg.plugin_name.toLocaleLowerCase().replace(/ /g, '-' ) %>.php'
                     },
                     {
                         expand: true,
@@ -36,7 +36,7 @@
         rename: {
             core: {
                 src: '../classes/class-context-core.php',
-                dest: '../classes/class-<%= pkg.slug %>.php'
+                dest: '../classes/class-<%= pkg.plugin_name.toLocaleLowerCase().replace(/ /g, '-' ) %>.php'
             }
         },
         uglify: {

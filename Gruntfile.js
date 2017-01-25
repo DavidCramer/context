@@ -3,23 +3,19 @@
     // Project configuration.
     grunt.initConfig({
         pkg :   grunt.file.readJSON( '../package.json' ),
-        namespace     : grunt.option( "slug" ),
-        curl: {
-            '../assets/js/handlebars.min-latest.js' : 'http://builds.handlebarsjs.com.s3.amazonaws.com/handlebars.min-latest.js'
-        },
         copy: {
             main: {
                 files:[
                     {
                         expand: false,
                         cwd: './',
-                        src: 'uix-bootstrap.php',
+                        src: 'context-bootstrap.php',
                         dest: '../<%= pkg.namespace %>-bootstrap.php'
                     },
                     {
                         expand: false,
                         cwd: './',
-                        src: 'uix-plugin.php',
+                        src: 'context-plugin.php',
                         dest: '../<%= pkg.namespace %>-plugin.php'
                     },
                     {
@@ -30,41 +26,17 @@
                     },
                     {
                         expand: true,
-                        cwd: 'assets/css',
+                        cwd: 'classes/',
                         src: '**',
-                        dest: '../assets/css/'
-                    },
-                    {
-                        expand: true,
-                        cwd: 'assets/js',
-                        src: '**',
-                        dest: '../assets/js/'
-                    },
-                    {
-                        expand: true,
-                        cwd: 'assets/svg',
-                        src: '**',
-                        dest: '../assets/svg/'
-                    },
-                    {
-                        expand: true,
-                        cwd: 'assets/controls',
-                        src: '**',
-                        dest: '../assets/controls/'
-                    },
-                    {
-                        expand: true,
-                        cwd: 'classes/uix/',
-                        src: '**',
-                        dest: '../classes/<%= pkg.namespace %>/'
+                        dest: '../classes/'
                     }
                 ]
             }
         },
         rename: {
             core: {
-                src: '../classes/<%= pkg.namespace %>/ui/uix.php',
-                dest: '../classes/<%= pkg.namespace %>/ui/<%= pkg.namespace %>.php'
+                src: '../classes/class-context.php',
+                dest: '../classes/class-<%= pkg.namespace %>.php'
             }
         },
         uglify: {
@@ -107,6 +79,6 @@
      grunt.loadNpmTasks( 'grunt-contrib-clean' );
      grunt.loadNpmTasks( 'grunt-rename' );
      //installer tasks
-     grunt.registerTask( 'default', [ 'curl', 'copy', 'rename', 'cssmin', 'uglify', 'clean' ] );
+     grunt.registerTask( 'default', [ 'copy', 'rename', 'cssmin', 'uglify', 'clean' ] );
 
  };

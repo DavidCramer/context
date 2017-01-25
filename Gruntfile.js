@@ -10,13 +10,13 @@
                         expand: false,
                         cwd: './',
                         src: 'context-bootstrap.php',
-                        dest: '../<%= pkg.plugin_name.toLocaleLowerCase().replace(/[^a-z0-9]/gi, '-') %>-bootstrap.php'
+                        dest: "../<%= pkg.plugin_name.toLocaleLowerCase().replace(/[^a-z0-9]/gi, '-') %>-bootstrap.php"
                     },
                     {
                         expand: false,
                         cwd: './',
                         src: 'context.php',
-                        dest: '../<%= pkg.plugin_name.toLocaleLowerCase().replace(/[^a-z0-9]/gi, '-' ) %>.php'
+                        dest: "../<%= pkg.plugin_name.toLocaleLowerCase().replace(/[^a-z0-9]/gi, '-' ) %>.php"
                     },
                     {
                         expand: true,
@@ -36,7 +36,7 @@
         rename: {
             core: {
                 src: '../classes/class-context-core.php',
-                dest: '../classes/class-<%= pkg.plugin_name.toLocaleLowerCase().replace(/[^a-z0-9]/gi, '-' ) %>.php'
+                dest: "../classes/class-<%= pkg.plugin_name.toLocaleLowerCase().replace(/[^a-z0-9]/gi, '-' ) %>.php"
             }
         },
         uglify: {

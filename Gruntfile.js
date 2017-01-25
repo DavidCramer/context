@@ -10,13 +10,13 @@
                         expand: false,
                         cwd: './',
                         src: 'context-bootstrap.php',
-                        dest: '../<%= pkg.slug %>-bootstrap.php'
+                        dest: '../<%= pkg.namespace %>-bootstrap.php'
                     },
                     {
                         expand: false,
                         cwd: './',
                         src: 'context.php',
-                        dest: '../<%= pkg.slug %>.php'
+                        dest: '../<%= pkg.namespace %>.php'
                     },
                     {
                         expand: true,

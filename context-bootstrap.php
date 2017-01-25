@@ -26,9 +26,4 @@ if ( defined( 'WPINC' ) ) {
 
 	// bootstrap plugin load
 	add_action( 'plugins_loaded', 'context' );
-
-	add_action( 'admin_menu', function(){
-		var_dump( context()->request_data['get'] );
-		die;
-	});
 }

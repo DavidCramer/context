@@ -3,7 +3,7 @@
  * Plugin Name: Context
  * Plugin URI: %plugin_url%
  * Description: %description%
- * Version: %version%
+ * Version: 1.0.0
  * Author: %author%
  * Author URI: %author_url%
  * Text Domain: %textdomain%

@@ -1,12 +1,12 @@
 <?php
 /*
  * Plugin Name: Context
- * Plugin URI: 
- * Description: Complete Custom Post Type System
- * Version: 1.0.0
- * Author: David Cramer
- * Author URI: https://cramer.co.za
- * Text Domain: context
+ * Plugin URI: %plugin_url%
+ * Description: %description%
+ * Version: %version%
+ * Author: %author%
+ * Author URI: %author_url%
+ * Text Domain: %textdomain%
  * License: GPL2+
 */
 

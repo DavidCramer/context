@@ -7,18 +7,6 @@
             main: {
                 files:[
                     {
-                        expand: false,
-                        cwd: './',
-                        src: 'context-bootstrap.php',
-                        dest: '../<%= pkg.namespace %>-bootstrap.php'
-                    },
-                    {
-                        expand: false,
-                        cwd: './',
-                        src: 'context-plugin.php',
-                        dest: '../<%= pkg.namespace %>-plugin.php'
-                    },
-                    {
                         expand: true,
                         cwd: 'includes',
                         src: '**',

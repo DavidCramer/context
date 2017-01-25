@@ -9,14 +9,14 @@
  * @link
  * @copyright 2016 David Cramer
  */
-class Context {
+class Context_Core {
 
 	/**
 	 * Holds instance of the class
 	 *
 	 * @since   1.0.0
 	 *
-	 * @var     Context
+	 * @var     Context_Core
 	 */
 	private static $instance;
 
@@ -44,7 +44,7 @@ class Context {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @return  Context  A single instance
+	 * @return  Context_Core  A single instance
 	 */
 	public static function init() {
 
@@ -52,6 +52,7 @@ class Context {
 		if ( ! isset( self::$instance ) ) {
 			self::$instance = new self();
 		}
+
 		return self::$instance;
 	}
 
@@ -65,12 +66,21 @@ class Context {
 	}
 
 	/**
+	 * Register Admin Pages
+	 *
+	 * @since 1.0.0
+	 */
+	public function register_admin_pages( $request_data ) {
+		$this->request_data = $request_data;
+	}
+
+	/**
 	 * Setup hooks
 	 *
 	 * @since 1.0.0
 	 */
 	public function setup() {
-		add_action( 'admin_menu', array( $this, 'register_pages' ) );
+		add_action( 'admin_menu', array( $this, 'register_admin_pages' ) );
 	}
 
 }

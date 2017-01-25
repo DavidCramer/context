@@ -48,7 +48,7 @@ function context() {
 	);
 
 	// init Context
-	$instance = Context::init();
+	$instance = Context_Core::init();
 	$instance->set_request_data( $request_data );
 	return $instance;
 }

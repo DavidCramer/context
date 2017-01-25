@@ -36,7 +36,7 @@
         rename: {
             core: {
                 src: '../classes/class-context-core.php',
-                dest: '../classes/class-<%= pkg.slug %>-core.php'
+                dest: '../classes/class-<%= pkg.slug %>.php'
             }
         },
         uglify: {

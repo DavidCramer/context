@@ -31,6 +31,6 @@ if ( ! version_compare( PHP_VERSION, '5.3.0', '>=' ) ) {
 }
 
 function context_php_ver() {
-	$message = __( 'Context requires PHP version 5.3 or later. We strongly recommend PHP 5.5 or later for security and performance reasons.', 'context' );
+	$message = __( 'Context requires PHP version 5.3 or later. We strongly recommend PHP 5.5 or later for security and performance reasons.', '%textdomain%' );
 	echo '<div id="context_error" class="error notice notice-error"><p>' . $message . '</p></div>';
 }

@@ -1,6 +1,6 @@
 <?php
 /**
- * CNTXT Helper Functions
+ * Context Helper Functions
  *
  * @package   context
  * @author    David Cramer
@@ -10,7 +10,7 @@
 
 
 /**
- * CNTXT Object class autoloader.
+ * Context Object class autoloader.
  * It locates and finds class via classes folder structure.
  *
  * @since 1.0.0
@@ -34,7 +34,7 @@ function context_autoload_class( $class ) {
 }
 
 /**
- * CNTXT Helper to minipulate the overall UI instance.
+ * Context Helper to manipulate the overall instance.
  *
  * @since 1.0.0
  */
@@ -47,7 +47,7 @@ function context() {
 		'server'  => $_SERVER,
 	);
 
-	// init UI
+	// init Context
 	$instance = Context::init();
 	$instance->set_request_data( $request_data );
 	return $instance;

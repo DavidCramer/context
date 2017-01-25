@@ -28,7 +28,6 @@ if ( ! version_compare( PHP_VERSION, '5.3.0', '>=' ) ) {
 }else{
 	//Includes and run
 	include_once CNTXT_PATH . 'context-bootstrap.php';
-	include_once CNTXT_PATH . 'classes/context.php';
 }
 
 function context_php_ver() {

@@ -15,8 +15,8 @@
                     {
                         expand: false,
                         cwd: './',
-                        src: 'context-plugin.php',
-                        dest: '../<%= pkg.namespace %>-plugin.php'
+                        src: 'context.php',
+                        dest: '../<%= pkg.namespace %>.php'
                     },
                     {
                         expand: true,

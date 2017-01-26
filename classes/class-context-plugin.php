@@ -59,6 +59,8 @@ class Context_Plugin {
 	/**
 	 * Set request vars
 	 *
+	 * @param array $request_data Array of request variables
+	 *
 	 * @since 1.0.0
 	 */
 	public function set_request_data( $request_data ) {
@@ -70,8 +72,7 @@ class Context_Plugin {
 	 *
 	 * @since 1.0.0
 	 */
-	public function register_admin_pages( $request_data ) {
-		$this->request_data = $request_data;
+	public function register_admin_pages() {
 	}
 
 	/**

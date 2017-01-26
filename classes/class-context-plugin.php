@@ -100,11 +100,12 @@ class Context_Plugin {
 	}
 
 	/**
-	 * Setup hooks
+	 * Setup hooks and text domain
 	 *
 	 * @since 1.0.0
 	 */
 	public function setup() {
+		load_plugin_textdomain( 'context-plugin', false, basename( CNTXT_PATH ) . '/languages' );
 		add_action( 'admin_menu', array( $this, 'register_admin_pages' ) );
 	}
 

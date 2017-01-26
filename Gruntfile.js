@@ -29,6 +29,12 @@
                         cwd: 'classes/',
                         src: '**',
                         dest: '../classes/'
+                    },
+                    {
+                        expand: true,
+                        cwd: 'languages/',
+                        src: '**',
+                        dest: '../languages/'
                     }
                 ]
             }

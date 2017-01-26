@@ -1,8 +1,8 @@
 <?php
 /**
- * Context Helper Functions
+ * Context Plugin Helper Functions
  *
- * @package   context
+ * @package   context_plugin
  * @author    David Cramer
  * @license   GPL-2.0+
  * @copyright 2017 David Cramer
@@ -10,14 +10,14 @@
 
 
 /**
- * Context Object class autoloader.
+ * Context Plugin Object class autoloader.
  * It locates and finds class via classes folder structure.
  *
  * @since 1.0.0
  *
  * @param string $class class name to be checked and autoloaded
  */
-function context_autoload_class( $class ) {
+function context_plugin_autoload_class( $class ) {
 	$parts = explode( '\\', $class );
 	$name  = strtolower( str_replace( '_', '-', array_shift( $parts ) ) );
 	if ( file_exists( CNTXT_PATH . 'classes/' . $name ) ) {
@@ -34,11 +34,11 @@ function context_autoload_class( $class ) {
 }
 
 /**
- * Context Helper to manipulate the overall instance.
+ * Context Plugin Helper to manipulate the overall instance.
  *
  * @since 1.0.0
  */
-function context() {
+function context_plugin() {
 	$request_data = array(
 		'post'    => $_POST,
 		'get'     => $_GET,
@@ -48,7 +48,7 @@ function context() {
 	);
 
 	// init Context
-	$instance = Context_Core::init();
+	$instance = Context_Plugin::init();
 	$instance->set_request_data( $request_data );
 	return $instance;
 }

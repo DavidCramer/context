@@ -1,8 +1,8 @@
 <?php
 /**
- * Context Bootstrapper
+ * Context Plugin Bootstrapper
  *
- * @package   context
+ * @package   context_plugin
  * @author    David Cramer
  * @license   GPL-2.0+
  * @link
@@ -21,9 +21,9 @@ if ( defined( 'WPINC' ) ) {
 	// include context helper functions and autoloader.
 	require_once( CNTXT_PATH . 'includes/functions.php' );
 
-	// register context autoloader
-	spl_autoload_register( 'context_autoload_class', true, false );
+	// register context plugin autoloader
+	spl_autoload_register( 'context_plugin_autoload_class', true, false );
 
 	// bootstrap plugin load
-	add_action( 'plugins_loaded', 'context' );
+	add_action( 'plugins_loaded', 'context_plugin' );
 }

@@ -1,22 +1,22 @@
 <?php
 
 /**
- * Context Main Class
+ * Context Plugin Main Class
  *
- * @package   sontext
+ * @package   context_plugin
  * @author    David Cramer
  * @license   GPL-2.0+
  * @link
  * @copyright 2016 David Cramer
  */
-class Context_Core {
+class Context_Plugin {
 
 	/**
 	 * Holds instance of the class
 	 *
 	 * @since   1.0.0
 	 *
-	 * @var     Context_Core
+	 * @var     Context_Plugin
 	 */
 	private static $instance;
 
@@ -30,7 +30,7 @@ class Context_Core {
 	public $request_data;
 
 	/**
-	 * Context constructor.
+	 * Context Plugin constructor.
 	 */
 	public function __construct() {
 
@@ -44,7 +44,7 @@ class Context_Core {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @return  Context_Core  A single instance
+	 * @return  Context_Plugin  A single instance
 	 */
 	public static function init() {
 

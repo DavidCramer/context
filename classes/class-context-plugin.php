@@ -30,6 +30,15 @@ class Context_Plugin {
 	public $request_data;
 
 	/**
+	 * Holds the main admin page suffix
+	 *
+	 * @since   1.0.0
+	 *
+	 * @var     array
+	 */
+	public $admin_page;
+
+	/**
 	 * Context Plugin constructor.
 	 */
 	public function __construct() {
@@ -73,6 +82,21 @@ class Context_Plugin {
 	 * @since 1.0.0
 	 */
 	public function register_admin_pages() {
+		$this->admin_page = add_menu_page( 'Context Plugin', 'Context Plugin', 'manage_options', 'context-plugin', array(
+			$this,
+			'admin_render',
+		) );
+		// enqueue admin scripts and styles
+		add_action( 'admin_print_styles-' . $this->admin_page, array( $this, 'style_scripts' ) );
+	}
+
+	/**
+	 * enqueue style and scripts for admin
+	 *
+	 * @since 1.0.0
+	 */
+	public function style_scripts() {
+
 	}
 
 	/**

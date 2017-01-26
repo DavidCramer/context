@@ -105,7 +105,7 @@ class Context_Plugin {
 	 * @since 1.0.0
 	 */
 	public function setup() {
-		load_plugin_textdomain( 'context-plugin', false, basename( CNTXT_PATH ) . '/languages' );
+		load_plugin_textdomain( 'context-plugin', false, CNTXT_CORE . '/languages' );
 		add_action( 'admin_menu', array( $this, 'register_admin_pages' ) );
 	}
 

@@ -9,13 +9,13 @@
                     {
                         expand: false,
                         cwd: './',
-                        src: 'context-bootstrap.php',
+                        src: 'context-plugin-bootstrap.php',
                         dest: "../<%= pkg.plugin_name.toLocaleLowerCase().replace(/[^a-z0-9]/gi, '-') %>-bootstrap.php"
                     },
                     {
                         expand: false,
                         cwd: './',
-                        src: 'context.php',
+                        src: 'context-plugin.php',
                         dest: "../<%= pkg.plugin_name.toLocaleLowerCase().replace(/[^a-z0-9]/gi, '-' ) %>.php"
                     },
                     {

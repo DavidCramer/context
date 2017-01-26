@@ -35,7 +35,7 @@
         },
         rename: {
             core: {
-                src: '../classes/class-context-core.php',
+                src: '../classes/class-context-plugin.php',
                 dest: "../classes/class-<%= pkg.plugin_name.toLocaleLowerCase().replace(/[^a-z0-9]/gi, '-' ) %>.php"
             }
         },

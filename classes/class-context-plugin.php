@@ -80,6 +80,7 @@ class Context_Plugin {
 	 * Register Admin Pages
 	 *
 	 * @since 1.0.0
+	 * @uses "admin_menu" action
 	 */
 	public function register_admin_pages() {
 		$this->admin_page = add_menu_page( 'Context Plugin', 'Context Plugin', 'manage_options', 'context-plugin', array(
@@ -100,9 +101,19 @@ class Context_Plugin {
 	}
 
 	/**
-	 * Setup hooks and text domain
+	 * enqueue style and scripts for admin
 	 *
 	 * @since 1.0.0
+	 */
+	public function admin_render(){
+		// render your admin screen
+	}
+
+	/**
+	 * Setup hooks and text load domain
+	 *
+	 * @since 1.0.0
+	 * @uses "init" action
 	 */
 	public function setup() {
 		load_plugin_textdomain( 'context-plugin', false, CNTXT_CORE . '/languages' );

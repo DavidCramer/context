@@ -34,9 +34,10 @@ function context_plugin_autoload_class( $class ) {
 }
 
 /**
- * Context Plugin Helper to manipulate the overall instance.
+ * Context Plugin Helper to load and manipulate the overall instance.
  *
  * @since 1.0.0
+ * @return  Context_Plugin  A single instance
  */
 function context_plugin() {
 	$request_data = array(

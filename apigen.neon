@@ -1,0 +1,18 @@
+source: ./
+destination: docs/
+title: Documentation
+groups: namespaces
+exclude: 
+    - docs/*
+    - node_modules/*
+    - vendor/*
+templateTheme: bootstrap
+accessLevels:
+    - public
+    - protected
+internal: no
+php: yes
+tree: yes
+deprecated: no
+todo: yes
+sourceCode: yes

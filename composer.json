@@ -1,0 +1,9 @@
+{
+    "name": "context_plugin/context-plugin",
+    "type": "wordpress-plugin",
+    "license": "GPL2+",
+    "require": {},
+    "require-dev": {
+        "apigen/apigen": "^4.1"
+    }
+}

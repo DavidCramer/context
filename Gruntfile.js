@@ -74,7 +74,14 @@
         clean: {
             build: ["etc/**", "node_modules/**",".git/**",".gitignore","composer.json","Gruntfile.js","package.json"],
         },
-
+        shell: {
+            composer: {
+                command: 'composer update'
+            },
+            apigen: {
+                command: 'vendor/bin/apigen generate'
+            },
+        },
     });
 
      //load modules
@@ -84,7 +91,8 @@
      grunt.loadNpmTasks( 'grunt-contrib-copy' );
      grunt.loadNpmTasks( 'grunt-contrib-clean' );
      grunt.loadNpmTasks( 'grunt-rename' );
+     grunt.loadNpmTasks( 'grunt-shell');
      //installer tasks
      grunt.registerTask( 'default', [ 'copy', 'rename', 'cssmin', 'uglify', 'clean' ] );
-
+     grunt.registerTask( 'docs', [ 'shell' ] );
  };

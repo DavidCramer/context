@@ -19,6 +19,18 @@
                         dest: "../<%= pkg.plugin_name.toLocaleLowerCase().replace(/[^a-z0-9]/gi, '-' ) %>.php"
                     },
                     {
+                        expand: false,
+                        cwd: './',
+                        src: 'composer.json',
+                        dest: "../composer.json"
+                    },
+                    {
+                        expand: false,
+                        cwd: './',
+                        src: 'apigen.neon',
+                        dest: "../apigen.neon"
+                    },
+                    {
                         expand: true,
                         cwd: 'includes',
                         src: '**',
@@ -89,5 +101,4 @@
      grunt.loadNpmTasks( 'grunt-rename' );
      //installer tasks
      grunt.registerTask( 'default', [ 'copy', 'clean', 'rename', 'cssmin', 'uglify' ] );
-     grunt.registerTask( 'docs', [ 'shell' ] );
  };

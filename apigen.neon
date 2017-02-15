@@ -1,6 +1,6 @@
 source: ./
 destination: docs/
-title: Documentation
+title: Context Plugin Documentation
 groups: namespaces
 exclude: 
     - docs/*

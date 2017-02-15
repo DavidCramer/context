@@ -43,6 +43,10 @@
             core: {
                 src: '../classes/class-context-plugin.php',
                 dest: "../classes/class-<%= pkg.plugin_name.toLocaleLowerCase().replace(/[^a-z0-9]/gi, '-' ) %>.php"
+            },
+            grunt:{
+                src: 'installed.js',
+                dest: '../Gruntfile.js'
             }
         },
         uglify: {
@@ -73,15 +77,7 @@
         },
         clean: {
             build: ["etc/**", "node_modules/**",".git/**",".gitignore","composer.json","Gruntfile.js","package.json"],
-        },
-        shell: {
-            composer: {
-                command: 'composer update'
-            },
-            apigen: {
-                command: 'vendor/bin/apigen generate'
-            },
-        },
+        }
     });
 
      //load modules
@@ -91,8 +87,7 @@
      grunt.loadNpmTasks( 'grunt-contrib-copy' );
      grunt.loadNpmTasks( 'grunt-contrib-clean' );
      grunt.loadNpmTasks( 'grunt-rename' );
-     grunt.loadNpmTasks( 'grunt-shell');
      //installer tasks
-     grunt.registerTask( 'default', [ 'copy', 'rename', 'cssmin', 'uglify', 'clean' ] );
+     grunt.registerTask( 'default', [ 'copy', 'clean', 'rename', 'cssmin', 'uglify' ] );
      grunt.registerTask( 'docs', [ 'shell' ] );
  };

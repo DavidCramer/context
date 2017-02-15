@@ -33,7 +33,7 @@ module.exports = function (grunt) {
                 command: 'composer update'
             },
             apigen: {
-                command: 'vendor/bin/apigen generate'
+                command: '"vendor/bin/apigen" generate'
             },
         }
 

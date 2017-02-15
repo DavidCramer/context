@@ -44,7 +44,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks( 'grunt-contrib-uglify' );
     grunt.loadNpmTasks( 'grunt-shell');
     //installer tasks
-    grunt.registerTask( 'default', [ 'shell:composer', 'cssmin', 'uglify' ] );
+    grunt.registerTask( 'default', [ 'shell:composer', 'cssmin', 'uglify', 'shell:apigen' ] );
     grunt.registerTask( 'docs', [ 'shell:apigen' ] );
 
 };

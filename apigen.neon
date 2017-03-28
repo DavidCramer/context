@@ -17,3 +17,10 @@ tree: yes
 deprecated: no
 todo: yes
 sourceCode: yes
+download: Yes
+wipeout: Yes
+quiet: No
+progressbar: Yes
+colors: Yes
+updateCheck: Yes
+debug: No

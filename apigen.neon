@@ -1,5 +1,5 @@
 source: ./
-destination: docs/
+destination: ../plugin-docs/context-plugin
 title: Context Plugin Documentation
 groups: namespaces
 exclude: 
@@ -10,7 +10,8 @@ templateTheme: bootstrap
 accessLevels:
     - public
     - protected
-internal: no
+    - private
+internal: yes
 php: yes
 tree: yes
 deprecated: no

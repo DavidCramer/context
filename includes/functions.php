@@ -51,5 +51,6 @@ function context_plugin() {
 	// init Context
 	$instance = Context_Plugin::init();
 	$instance->set_request_data( $request_data );
+
 	return $instance;
 }

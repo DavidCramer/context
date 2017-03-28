@@ -9,7 +9,7 @@
  * @link
  * @copyright 2016 David Cramer
  */
-class Context_Plugin {
+class Context_Plugin{
 
 	/**
 	 * Holds instance of the class
@@ -105,7 +105,7 @@ class Context_Plugin {
 	 *
 	 * @since 1.0.0
 	 */
-	public function admin_render(){
+	public function admin_render() {
 		// render your admin screen
 	}
 

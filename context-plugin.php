@@ -25,7 +25,7 @@ if ( ! version_compare( PHP_VERSION, '5.3.0', '>=' ) ) {
 	if ( is_admin() ) {
 		add_action( 'admin_notices', 'context_plugin_php_ver' );
 	}
-}else{
+} else {
 	//Includes and run
 	include_once CNTXT_PATH . 'context-plugin-bootstrap.php';
 }
